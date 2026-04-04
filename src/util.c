@@ -47,8 +47,22 @@ void print_usage(void)
            "Push payload to device via Sahara protocol\n");
     printf("  " CLR_RED "probe" CLR_RESET "                          "
            "Deep USB fingerprinting (no auth needed)\n");
+    printf("  " CLR_RED "extract" CLR_RESET "                        "
+           "Probe locked device via AT modem + USB\n");
     printf("  " CLR_RED "fullchain" CLR_RESET " <model>              "
            "Automated end-to-end attack sequence\n");
+    printf("\n" CLR_BOLD "UNLOCK:" CLR_RESET "\n");
+    printf("  " CLR_GREEN "gadget-setup" CLR_RESET " [output-dir]     "
+           "Generate Pi Zero USB exploit scripts\n");
+    printf("  " CLR_GREEN "pull" CLR_RESET " [output-dir]             "
+           "Extract photos via ADB (after exploit)\n");
+    printf("\n");
+    printf(CLR_BOLD "QUICK START:" CLR_RESET "\n");
+    printf("  sampass detect                     # detect device on USB\n");
+    printf("  sampass extract                    # probe locked device\n");
+    printf("  sampass gadget-setup ./pi_scripts  # generate Pi Zero exploit\n");
+    printf("  sampass fullchain SM-G780G         # automated attack\n");
+    printf("  sampass pull ./photos              # extract after unlock\n");
     printf("\n");
     printf(CLR_BOLD "EXAMPLES:" CLR_RESET "\n");
     printf("  sampass cve-scan SM-G780F 2021-11-01\n");

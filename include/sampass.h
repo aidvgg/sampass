@@ -131,6 +131,12 @@ int exploit_probe(void);
 int exploit_fullchain(const char *model);
 int exploit_extract(void);
 
+/* gadget.c */
+int gadget_setup(const char *output_dir);
+
+/* adb_extract.c */
+int adb_pull_photos(const char *output_dir);
+
 /* ANSI color codes */
 #define CLR_RESET   "\033[0m"
 #define CLR_RED     "\033[1;31m"

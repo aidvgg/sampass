@@ -111,6 +111,16 @@ int main(int argc, char *argv[])
         return exploit_fullchain(argv[2]);
     }
 
+    if (strcmp(cmd, "gadget-setup") == 0) {
+        print_banner();
+        return gadget_setup(argc >= 3 ? argv[2] : NULL);
+    }
+
+    if (strcmp(cmd, "pull") == 0) {
+        print_banner();
+        return adb_pull_photos(argc >= 3 ? argv[2] : NULL);
+    }
+
     if (strcmp(cmd, "help") == 0 || strcmp(cmd, "-h") == 0 || strcmp(cmd, "--help") == 0) {
         print_usage();
         return 0;
